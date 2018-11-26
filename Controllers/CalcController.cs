@@ -12,8 +12,8 @@ namespace AspNetCoreWatcher.Controllers
     { 
         [Route("[action]")]
         public ActionResult<string> Sum(
-            [FromQuery(Name = "num1")] int num1,
-            [FromQuery(Name = "num2")] int num2)
+            [FromQuery(Name = "num1")] double num1,
+            [FromQuery(Name = "num2")] double num2)
         {
             var sum = (num1 + num2).ToString();
             return $"The sum of numbers {num1} and {num2} is {sum}.";
